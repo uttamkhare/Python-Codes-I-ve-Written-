@@ -1,0 +1,46 @@
+#simple calculator program 
+
+#creating definition of functions using the word def
+def add(n1, n2):
+    return n1+n2
+
+def sub(n1,n2):
+    return n1-n2
+
+def mul(n1,n2):
+    return n1*n2
+
+def div(n1,n2):
+    return n1/n2
+
+def pow(n1,n2):
+    return n1**n2
+
+print("select operation-  \n"
+      "add \n"
+      "subtract \n"
+      "multiply \n"
+      "divide \n"
+      "power \n")   #we used \n to go to the next line
+
+select = str(input("what do u want to do with num1 and num2? "))
+n1 = int(input("first number: "))
+n2 = int(input("second number: "))
+
+if select == "add":
+ print(n1, "+", n2, "=", add(n1,n2))
+elif select == "subtract":
+ print(n1, "-", n2, "=", sub(n1,n2))
+elif select == "multiply":
+ print(n1, "-", n2 ,"=", mul(n1,n2))
+elif select == "divide":
+ print(n1, "-", n2, "=", div(n1,n2))
+elif select == "power":
+ print(n1, "is base and", n2 ,"is exponent, so", pow(n1,n2))
+else:
+ print("invalid function, check for spelling errors!")
+
+
+
+
+
