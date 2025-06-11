@@ -1,0 +1,43 @@
+#random is to be imported everytime i want the machine to decide something on its own
+import random
+
+options = ("rock", "paper", "scissor") #this is called a tuple i guess
+
+my_score = 0
+comp_score = 0
+
+while my_score<3 and comp_score<3:
+    computer = random.choice(options) #this chooses randomly from the tuple, random.choice is used for strings. 
+    me = str(input("your hands show "))
+    if me == computer:
+        print("draw")
+    elif me == "rock" and computer == "scissor":
+        print("you won this round")
+        my_score = my_score + 1
+    elif me == "rock" and computer == "paper":
+        print("computer won this round")
+        comp_score = comp_score+1
+    elif me == "paper" and computer == "scissor":
+        print("computer won this round")
+        comp_score = comp_score+1
+    elif me == "paper" and computer == "rock":
+        print("you won this round")
+        my_score = my_score + 1
+    elif me == "scissor" and computer == "paper":
+        print("you won this round")
+        my_score = my_score + 1
+    elif me == "scissor" and computer == "rock":
+        print("computer won this round")
+        comp_score = comp_score+1
+    else:
+         print("pata nhi mereko")
+         break
+    
+    
+if my_score > comp_score:
+        print("\n🎉 You win the game! 🎉")
+elif comp_score > my_score:
+        print("\n😢 Computer wins the game! 😢")
+else:
+        print("\n🤝 It's a tie! 🤝")
+    
